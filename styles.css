@@ -1,0 +1,119 @@
+:root{--ink:#0a1a2b;--muted:#5a6b80;--blue:#0e53a7;--blue-3:#e9f2ff;--card:#ffffff;/* 保持纯白底色 */--shadow:0 4px 16px rgba(10,26,43,0.08);--border-color:#e8edf3;/* 边框加深为浅灰，比之前更清晰 */--box-shadow-normal:0 5px 18px rgba(0,0,0,0.1);/* 正常状态阴影：加深且扩大，增强浮起感 */--box-shadow-hover:0 8px 24px rgba(0,0,0,0.15);/* hover状态阴影：更明显，交互感更强 */}
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fbfdff;/* 保持原浅蓝底色 */}
+.container{max-width:1180px;margin:0 auto;padding:0 20px;}
+.site-header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid #eef2f7;z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none}.brand-name{font-weight:700}
+.nav-list{display:flex;gap:22px;list-style:none;margin:0;padding:0}.nav-list a{color:var(--muted);text-decoration:none;font-weight:600}.nav-list a:hover{color:var(--ink)}
+.controls{display:flex;align-items:center;gap:12px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;border:1px solid var(--blue)}
+.hero-cta .btn{background: #ffffff;color: var(--blue);border: 1px solid #ffffff;}
+.btn-ghost{background:transparent;color:var(--blue)}.btn-small{padding:8px 12px;border-radius:8px;font-size:.9rem}
+.btn-lang{background:#fff;color:var(--ink);border:1px solid #d9e3f2}
+.lang-dropdown{position:relative}.lang-menu{position:absolute;right:0;top:calc(100% + 10px);min-width:260px;max-height:320px;overflow:auto;background:#fff;border:1px solid #e5eefb;border-radius:12px;box-shadow:0 8px 28px rgba(14,83,167,.15);padding:8px;display:none}
+.lang-menu.show{display:block}.lang-menu button{width:100%;text-align:left;background:#fff;border:0;padding:8px 10px;border-radius:8px;color:var(--ink);cursor:pointer}
+.lang-menu button:hover{background:var(--blue-3)}
+.hero{background: var(--blue);padding: 56px 0 20px;color: #fff;}
+.hero-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.hero-copy h1{font-size:42px;line-height:1.1;margin:0 0 12px;font-weight:900}
+.hero-copy .lead{color: #e9f2ff;max-width: 560px;margin: 0 0 18px;}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.hero-cta .btn-ghost{background: transparent;color: #fff;border: 1px solid #fff;}
+.section{padding:56px 0}.section-alt{background:#fbfdff}
+#mission .section-title{font-size:28px;margin:0 0 10px;text-align: center;}
+#mission .section-sub{color:var(--muted);margin:0 0 18px;text-align: center;}
+/* 1. 使命下3个胶囊框（加深阴影+调整边框） */
+.pills{display:flex;flex-wrap:wrap;gap:20px;padding:0;margin:10px 0 0;justify-content: center;}
+.pills li{
+  list-style:none;
+  background: var(--card);/* 纯白底色不变 */
+  border:1px solid var(--border-color);/* 边框加深为#e8edf3，更清晰 */
+  border-radius:12px;
+  padding:20px 24px;
+  display:flex;
+  flex-direction: column;
+  gap:8px;
+  align-items: flex-start;
+  min-width: 280px;
+  box-shadow: var(--box-shadow-normal);/* 正常状态：加深阴影，增强浮起感 */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;/* 新增transform过渡，hover更灵动 */
+}
+.pills li:hover{
+  box-shadow: var(--box-shadow-hover);/* hover时阴影更浓 */
+  transform: translateY(-2px);/* 轻微上移2px，强化“浮起来”的动态感 */
+}
+.pills strong{
+  font-weight: normal;/* 取消加粗 */
+  font-size: 16px;/* 与“我们的使命”下方文字大小一致 */
+  color: var(--ink);
+}
+.pills span{color: var(--muted);line-height: 1.5;}
+#showcase .section-title{font-size:28px;margin:0 0 10px;text-align: center;}
+.center{
+  text-align: center;
+  margin-top: 8px;/* 精品区“查看更多”按钮间距，拉开1-2mm */
+}
+/* 2. 精品下6个卡片+案例下3个卡片（同步阴影+边框） */
+.grid{display:grid;gap:16px;}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.card{
+  background: var(--card);/* 纯白底色不变 */
+  border:1px solid var(--border-color);/* 统一加深边框 */
+  border-radius:16px;
+  min-height:120px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:12px;
+  box-shadow: var(--box-shadow-normal);/* 统一正常阴影 */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;/* 统一过渡效果 */
+}
+.card:hover{
+  box-shadow: var(--box-shadow-hover);/* 统一hover阴影 */
+  transform: translateY(-2px);/* 统一hover上移 */
+}
+.card.tall{min-height:160px}
+.card h3{
+  color: var(--ink);
+  font-size:16px;/* 与参考文字大小一致，取消原1.5rem（24px）的大字体 */
+  font-weight: normal;/* 取消加粗 */
+  font-family: inherit;/* 取消黑体，继承默认字体 */
+  margin:0;
+}
+#cases .section-title{font-size:28px;margin:0 0 10px;text-align: center;}
+.two-col{display:grid;grid-template-columns: 1.1fr 0.9fr;gap:24px;align-items: start;}
+/* 3. 联系我们表单（同步阴影+边框） */
+.form{
+  background: var(--card);/* 纯白底色不变 */
+  border:1px solid var(--border-color);/* 统一加深边框 */
+  border-radius:16px;
+  padding:24px;
+  box-shadow: var(--box-shadow-normal);/* 统一正常阴影 */
+  transition: box-shadow 0.3s ease;/* 表单hover只加阴影，不上移（更稳重） */
+}
+.form:hover{box-shadow: var(--box-shadow-hover);}
+.form input,.form textarea{border:1px solid #d9e3f2;border-radius:10px;padding:10px 12px;font:inherit;width:100%;color:var(--ink);}
+.form label{color:var(--ink);font-weight:600;}
+#contact .section-title{font-size:28px;margin:0 0 10px;text-align: center;color:var(--ink);}
+#about .section-title{text-align: center;font-size:28px;margin:0 0 10px;color:var(--ink);}
+#about .col p{max-width: 500px;margin:0 auto;line-height: 1.7;color:var(--ink);}
+.site-footer{background: var(--blue);border-top: none;padding: 40px 0 20px;color: #fff;}
+.footer-inner{display: grid;grid-template-rows: auto 1fr;gap: 20px;max-width: 1180px;margin: 0 auto;padding:0 20px;}
+.footer-top{text-align: center;margin-bottom: 20px;}
+.footer-top .main-title{font-size: 22px;font-weight: 800;margin: 0;display: flex;align-items: center;justify-content: center;gap: 10px;}
+.footer-top .main-title span{color: #e9f2ff;font-size: 18px;}
+.footer-top .subtitle{color: #e9f2ff;margin: 8px 0 0;font-size: 14px;}
+.footer-bottom{display: grid;grid-template-columns: 1fr auto 1fr;align-items: center;gap: 20px;}
+.footer-brand{display: flex;align-items: center;gap: 8px;font-weight: bold;margin-left: -12px;}
+.footer-brand img{width: 24px;height: 24px;}
+.footer-links{display: flex;gap: 18px;list-style: none;margin: 0;padding: 0;}
+.footer-links a{color: #e9f2ff;text-decoration: none;font-size: 14px;}
+.footer-links a:hover{color: #fff;}
+.copy{color: #d1e4ff;font-size: 12px;justify-self: end;margin: 0;}
+@media (max-width:980px){
+  .hero-inner{flex-direction:column;align-items:center}
+  .hero-globe img{width:320px}
+  .two-col{grid-template-columns:1fr}
+  .pills{justify-content: center;}
+  .grid-3{grid-template-columns:1fr;}
+}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Global Gravity — 以精品连接世界</title>
+  <meta name="theme-color" content="#0e53a7"/>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="main.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="brand"><img src="assets/logo.svg" alt="" width="36" height="36"/><span class="brand-name" data-i18n="brand">Global Gravity</span></a>
+    <nav class="nav"><ul class="nav-list" id="nav-list">
+      <li><a href="#mission" data-i18n="nav_mission">使命</a></li>
+      <li><a href="#showcase" data-i18n="nav_showcase">精品</a></li>
+      <li><a href="#cases" data-i18n="nav_cases">案例</a></li>
+      <li><a href="#about" data-i18n="nav_about">关于</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">联系</a></li>
+    </ul></nav>
+    <div class="controls">
+      <div class="lang-dropdown">
+        <button id="langBtn" class="btn btn-lang" aria-haspopup="listbox" aria-expanded="false" data-i18n="lang_switch">语言切换</button>
+        <ul class="lang-menu" id="langMenu" role="listbox" aria-label="Languages"></ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1 data-i18n="hero_title">以精品连接世界</h1>
+        <p class="lead" data-i18n="hero_sub">用创意设计与数据打造“少而精”的全球品牌店。</p>
+        <div class="hero-cta"><a href="#showcase" class="btn" data-i18n="btn_preview">预览精品</a><a href="#contact" class="btn btn-ghost" data-i18n="btn_meet">预约交流</a></div>
+      </div>
+      <div class="hero-globe"><img src="assets/hero-globe.svg" alt="" width="520" height="520"/></div>
+    </div>
+  </section>
+
+  <section id="mission" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="mission_title">我们的使命</h2>
+      <p class="section-sub" data-i18n="mission_sub">成为全球精品与消费者之间的使者。</p>
+      <ul class="pills">
+        <li><strong data-i18n="pill_select_title">精品优选</strong><span data-i18n="pill_select_desc">严选全球品类，专注少而精</span></li>
+        <li><strong data-i18n="pill_design_title">设计驱动</strong><span data-i18n="pill_design_desc">海洋蓝视觉与清晰的信息结构</span></li>
+        <li><strong data-i18n="pill_global_title">面向全球</strong><span data-i18n="pill_global_desc">多语言 SEO，触达更多用户</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="showcase" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="showcase_title">精品展示</h2>
+      <div class="grid grid-3">
+        <article class="card"><h3 data-i18n="sc1">服饰与包袋</h3></article>
+        <article class="card"><h3 data-i18n="sc2">美容与个护</h3></article>
+        <article class="card"><h3 data-i18n="sc3">美食与饮品</h3></article>
+        <article class="card"><h3 data-i18n="sc4">3C与家电</h3></article>
+        <article class="card"><h3 data-i18n="sc5">运动与健康</h3></article>
+        <article class="card"><h3 data-i18n="sc6">户外·旅行·垂钓</h3></article>
+      </div>
+      <div class="center"><a class="btn btn-small" href="#" data-i18n="view_more">查看更多</a></div>
+    </div>
+  </section>
+
+  <section id="cases" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="cases_title">精选案例</h2>
+      <div class="grid grid-3">
+        <article class="card tall"><h3 data-i18n="case1">跨境新品破圈</h3></article>
+        <article class="card tall"><h3 data-i18n="case2">复购与口碑</h3></article>
+        <article class="card tall"><h3 data-i18n="case3">小众走向大影响</h3></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section section-alt">
+    <div class="container two-col">
+      <div class="col">
+        <h2 class="section-title" data-i18n="about_title">关于 Global Gravity</h2>
+        <p data-i18n="about_text">Global Gravity 由一群热爱生活的人组成，擅长把美好的想法变为现实。</p>
+      </div>
+      <div class="col" id="contact">
+        <!-- 此处已修改：“快速联系”→“联系我们” -->
+        <h2 class="section-title" data-i18n="contact_title">联系我们</h2>
+        <form class="form">
+          <label for="name" data-i18n="label_name">姓名</label>
+          <input id="name" name="name" placeholder="张三"/>
+          <label for="email" data-i18n="label_email">邮箱</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com"/>
+          <label for="message" data-i18n="label_message">留言</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+          <button type="submit" class="btn" data-i18n="send">发送</button>
+          <p class="hint"><span data-i18n="send_to">发送到</span>：contact@globalgravity.co</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+  <!-- 上层：居中大标题 -->
+  <div class="footer-top">
+    <h3 class="main-title">Global Gravity <span>环球引力</span></h3>
+    <p class="subtitle" data-i18n="footer_slogan">让每一件精品都拥有跨越山海的力量</p>
+  </div>
+  <!-- 下层：左-中-右 -->
+  <div class="footer-bottom">
+    <div class="footer-brand">
+      <img src="assets/logo.svg" alt="Global Gravity" width="24" height="24"/>
+      <span>Global Gravity</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#mission" data-i18n="nav_mission">使命</a></li>
+      <li><a href="#showcase" data-i18n="nav_showcase">精品</a></li>
+      <li><a href="#cases" data-i18n="nav_cases">案例</a></li>
+      <li><a href="#about" data-i18n="nav_about">关于</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">联系</a></li>
+    </ul>
+    <p class="copy">© 2025 Global Gravity. <span data-i18n="rights">保留所有版权</span></p>
+  </div>
+</div>
+</footer>
+</body>
+</html>
